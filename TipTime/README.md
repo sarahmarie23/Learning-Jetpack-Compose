@@ -3,7 +3,7 @@ Basic app that calculates a 15% tip. Will be upgraded to let the user choose the
 
 # App preview
 
-<img src = "TipTime/TipCalculator.gif" width = "200">
+<img src = "https://github.com/sarahmarie23/Learning-Jetpack-Compose/blob/8ec80de5edd2019b9b3db5071a65d06106a3a175/TipTime/TipCalculator.gif" width = "200">
 
 # Compose topics covered
 
