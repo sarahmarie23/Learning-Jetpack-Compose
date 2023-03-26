@@ -5,7 +5,7 @@ The previous version only calculated 15% tip.
 # App preview  
 Improved version 
 <p float="left">
-  <img src = "https://github.com/sarahmarie23/Learning-Jetpack-Compose/blob/306c449dc0316ce4077fb49ff3ecdab9023813cf/TipTime/TipCalculator2.gif" width = "200">
+  <img src = "https://github.com/sarahmarie23/Learning-Jetpack-Compose/blob/701dcf14a1826f26481ea119cc10678092f5d7c5/TipTime/TipCalculator2.gif" width = "200">
 &nbsp;&nbsp;&nbsp; 
   <img src = "https://github.com/sarahmarie23/Learning-Jetpack-Compose/blob/8ec80de5edd2019b9b3db5071a65d06106a3a175/TipTime/TipCalculator.gif" width = "200">
 </p>
@@ -20,6 +20,8 @@ Improved version
 * **Composition** - Produced by an _initial composition_, it is a description of the UI when composables are executed.
 * **Recomposition** - What Compose does to update composables that have changed state.
 * **State hoisting** - Lift the state from a composable to make it stateless. Used if you need to share the state with multiple composable functions or make a stateless composable that can be reused.
+* **Local test** - Used to test functions, classes, and properties
+* **Instrumentation test** - Used to test UI. Actually launches the app (local test doesn't launch).
 
 ### Code learned  
 
@@ -51,6 +53,7 @@ keyboardOptions = KeyboardOptions.Default.copy(
 keyboardActions = KeyboardActions(onNext = { focusManager.moveFocus(FocusDirection.Down)})
 keyboardActions = KeyboardActions(onDone = { focusManager.clearFocus() })
 ```
+* assertEquals - Method to test for equality
 
 ### Notes  
 
