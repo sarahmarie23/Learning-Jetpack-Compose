@@ -10,6 +10,9 @@ import androidx.compose.foundation.MutatePriority
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.runtime.Composable
@@ -25,38 +28,36 @@ import androidx.compose.ui.semantics.Role.Companion.Image
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.grid.data.DataSource.topics
 import com.example.grid.model.Topic
 import com.example.grid.ui.theme.GridTheme
+import javax.sql.DataSource
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GridTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    //Greeting("Android")
-                }
-            }
+            GridApp()
         }
     }
 }
-/*
+
 @Composable
 fun GridApp() {
     GridTheme {
-        GridList(topics = )
+        TopicsList(topicList = topics)
     }
 }
-*/
+
 @SuppressLint("ResourceType")
 @Composable
 fun TopicItemCard(topic : Topic, modifier: Modifier = Modifier) {
     Card(modifier = Modifier
-        .requiredHeight(68.dp)) {
+        .padding(8.dp)
+        .requiredHeight(68.dp)
+        .fillMaxWidth(0.5f),
+        elevation = 4.dp
+    ) {
         Row() {
             Image(
                 painter = painterResource(topic.imageResourceId),
@@ -92,16 +93,16 @@ fun TopicItemCard(topic : Topic, modifier: Modifier = Modifier) {
         }
     }
 }
-/*
+
 @Composable
 private fun TopicsList(topicList: List<Topic>, modifier: Modifier = Modifier) {
-    LazyColumn {
-        items(topicList) {topic -> TopicItemCard(topic)
-
+    LazyVerticalGrid(columns = GridCells.Fixed(2), content = {
+        items(topicList.size) {topic ->
+            TopicItemCard(topicList[topic])
         }
-    }
+    })
 }
-*/
+
 @Preview(showBackground = true)
 @Composable
 fun TopicItemCardPreview() {
