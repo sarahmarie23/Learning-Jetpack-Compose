@@ -8,19 +8,23 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.MutatePriority
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.integerResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -44,16 +48,21 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun GridApp() {
+    val background = if (isSystemInDarkTheme()) Color.Black else Color.White
     GridTheme {
-        TopicsList(topicList = topics)
+        Surface(modifier = Modifier
+            .fillMaxSize()
+            .background(background)
+        ) {
+            TopicsList(topicList = topics)
+        }
     }
 }
 
-@SuppressLint("ResourceType")
 @Composable
 fun TopicItemCard(topic : Topic, modifier: Modifier = Modifier) {
     Card(modifier = Modifier
-        .padding(8.dp)
+        .padding(4.dp)
         .requiredHeight(68.dp)
         .fillMaxWidth(0.5f),
         elevation = 4.dp
@@ -65,8 +74,7 @@ fun TopicItemCard(topic : Topic, modifier: Modifier = Modifier) {
                 modifier = Modifier.size(68.dp)
             )
             Column(
-                modifier = Modifier
-                    .padding(start = 16.dp, top = 16.dp, end = 16.dp)
+                modifier = Modifier.padding(start = 16.dp, top = 16.dp, end = 16.dp)
             ) {
                 Text(
                     text = stringResource(topic.titleResourceID),
@@ -79,15 +87,15 @@ fun TopicItemCard(topic : Topic, modifier: Modifier = Modifier) {
                     Image(
                         painter = painterResource(R.drawable.ic_grain),
                         contentDescription = null,
-                        colorFilter = ColorFilter.tint(Color.Black),
-                        modifier = Modifier.padding(end = 8.dp),
-
+                        modifier = Modifier
+                            .padding(end = 8.dp)
+                            .height(12.dp),
+                        colorFilter = if (!isSystemInDarkTheme()) ColorFilter.tint(Color.Black) else null,
                     )
                     Text(
                         text = topic.courseResourceId.toString(),
                         style = typography.caption
                     )
-
                 }
             }
         }
