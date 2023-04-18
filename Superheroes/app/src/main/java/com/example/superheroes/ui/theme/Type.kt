@@ -10,17 +10,30 @@ import com.example.superheroes.R
 
 // Set of Material typography styles to start with
 val Cabin = FontFamily(
-    Font(R.font.cabin_regular),
+    Font(R.font.cabin_regular, FontWeight.Normal),
     Font(R.font.cabin_bold, FontWeight.Bold)
 )
 
 
 val Typography = Typography(
+    defaultFontFamily = Cabin,
     body1 = TextStyle(
-        fontFamily = FontFamily.Default,
         fontWeight = FontWeight.Normal,
         fontSize = 16.sp
-    )
+    ),
+    h1 = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 30.sp
+    ),
+    h2 = TextStyle(
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp
+    ),
+    h3 = TextStyle(
+        fontWeight = FontWeight.Bold,
+        fontSize = 20.sp
+    ),
+
     /* Other default text styles to override
     button = TextStyle(
         fontFamily = FontFamily.Default,
