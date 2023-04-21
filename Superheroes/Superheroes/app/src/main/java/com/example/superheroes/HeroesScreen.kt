@@ -21,14 +21,19 @@ import com.example.superheroes.ui.theme.SuperheroesTheme
 @Composable
 fun SuperheroListItem(superhero: Superhero, modifier: Modifier = Modifier) {
     Card(
+        shape = Shapes.medium,
         elevation = 2.dp,
-        modifier = modifier
-            .clip(Shapes.medium)
-
+        modifier = Modifier
     ) {
-        Row(){
+        Row(
+            horizontalArrangement = Arrangement.SpaceAround,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+                .sizeIn(maxHeight = 72.dp)
+        ) {
             Column(
-                modifier = modifier.padding(16.dp)
+                //modifier = Modifier.height(72.dp)
             ) {
                 Text(
                     text = stringResource(superhero.name),
@@ -39,18 +44,15 @@ fun SuperheroListItem(superhero: Superhero, modifier: Modifier = Modifier) {
                     style = MaterialTheme.typography.body1
                 )
             }
-            Spacer(modifier = modifier.width(16.dp))
+            Spacer(modifier = Modifier.width(16.dp))
             Image(
-                modifier = modifier
+                contentScale = ContentScale.FillHeight,
+                modifier = Modifier
                     .clip(Shapes.small),
-                contentScale = ContentScale.Crop,
                 painter = painterResource(superhero.image),
                 contentDescription = null
             )
-
         }
-
-
     }
 }
 @Preview("Light Theme")
