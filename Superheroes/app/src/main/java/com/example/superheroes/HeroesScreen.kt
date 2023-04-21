@@ -28,7 +28,12 @@ fun SuperheroListItem(superhero: Superhero, modifier: Modifier = Modifier) {
     Card(
         shape = Shapes.medium,
         elevation = 2.dp,
-        modifier = Modifier
+        modifier = Modifier.padding(
+            start = 16.dp,
+            top = 8.dp,
+            end = 16.dp,
+            bottom = 8.dp
+        )
     ) {
         Row(
             horizontalArrangement = Arrangement.SpaceAround,
@@ -60,7 +65,7 @@ fun SuperheroListItem(superhero: Superhero, modifier: Modifier = Modifier) {
         }
     }
 }
-
+/*
 @Composable
 fun SuperheroApp() {
     Scaffold(
@@ -77,7 +82,7 @@ fun SuperheroApp() {
         }
     )
 }
-
+*/
 @Preview("Light Theme")
 @Preview("Dark Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
@@ -91,7 +96,7 @@ fun HeroPreview() {
         SuperheroListItem(superhero = hero)
     }
 }
-
+/*
 @Preview("Light Theme")
 @Preview("Dark Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
@@ -105,3 +110,4 @@ fun SuperheroAppPreview() {
         SuperheroApp()
     }
 }
+*/
