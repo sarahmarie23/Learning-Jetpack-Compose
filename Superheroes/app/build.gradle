@@ -33,12 +33,13 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+
     }
     buildFeatures {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.2.0"
+        kotlinCompilerExtensionVersion compose_ui_version
     }
     packagingOptions {
         resources {
@@ -58,3 +59,4 @@ dependencies {
     implementation 'androidx.core:core-ktx:+'
     debugImplementation "androidx.compose.ui:ui-tooling"
 }
+/* Don't touch this (until everything works!!!) */

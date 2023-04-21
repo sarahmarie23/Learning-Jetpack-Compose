@@ -2,9 +2,13 @@ package com.example.superheroes
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -14,6 +18,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.superheroes.model.HeroesRepository.heroes
 import com.example.superheroes.model.Superhero
 import com.example.superheroes.ui.theme.Shapes
 import com.example.superheroes.ui.theme.SuperheroesTheme
@@ -21,14 +26,19 @@ import com.example.superheroes.ui.theme.SuperheroesTheme
 @Composable
 fun SuperheroListItem(superhero: Superhero, modifier: Modifier = Modifier) {
     Card(
+        shape = Shapes.medium,
         elevation = 2.dp,
-        modifier = modifier
-            .clip(Shapes.medium)
-
+        modifier = Modifier
     ) {
-        Row(){
+        Row(
+            horizontalArrangement = Arrangement.SpaceAround,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+                .sizeIn(maxHeight = 72.dp)
+        ) {
             Column(
-                modifier = modifier.padding(16.dp)
+                //modifier = Modifier.height(72.dp)
             ) {
                 Text(
                     text = stringResource(superhero.name),
@@ -39,20 +49,35 @@ fun SuperheroListItem(superhero: Superhero, modifier: Modifier = Modifier) {
                     style = MaterialTheme.typography.body1
                 )
             }
-            Spacer(modifier = modifier.width(16.dp))
+            Spacer(modifier = Modifier.width(16.dp))
             Image(
-                modifier = modifier
+                contentScale = ContentScale.FillHeight,
+                modifier = Modifier
                     .clip(Shapes.small),
-                contentScale = ContentScale.Crop,
                 painter = painterResource(superhero.image),
                 contentDescription = null
             )
-
         }
-
-
     }
 }
+
+@Composable
+fun SuperheroApp() {
+    Scaffold(
+        content = {
+            it
+            LazyColumn(
+                modifier = Modifier.background(MaterialTheme.colors.background)
+            ) {
+
+                items(heroes) {
+                    SuperheroListItem(superhero = it)
+                }
+            }
+        }
+    )
+}
+
 @Preview("Light Theme")
 @Preview("Dark Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
@@ -64,5 +89,19 @@ fun HeroPreview() {
     )
     SuperheroesTheme {
         SuperheroListItem(superhero = hero)
+    }
+}
+
+@Preview("Light Theme")
+@Preview("Dark Theme", uiMode = Configuration.UI_MODE_NIGHT_YES)
+@Composable
+fun SuperheroAppPreview() {
+    val hero = Superhero(
+        R.string.hero1,
+        R.string.description1,
+        R.drawable.android_superhero1
+    )
+    SuperheroesTheme {
+        SuperheroApp()
     }
 }
