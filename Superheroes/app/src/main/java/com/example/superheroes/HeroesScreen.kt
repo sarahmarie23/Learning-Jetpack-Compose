@@ -25,29 +25,26 @@ import com.example.superheroes.ui.theme.SuperheroesTheme
 
 @Composable
 fun SuperheroListItem(superhero: Superhero, modifier: Modifier = Modifier) {
+
     Card(
         shape = Shapes.medium,
         elevation = 2.dp,
-        modifier = Modifier.padding(
-            start = 16.dp,
-            top = 8.dp,
-            end = 16.dp,
-            bottom = 8.dp
-        )
+        modifier = Modifier.padding(16.dp)
+
     ) {
         Row(
-            horizontalArrangement = Arrangement.SpaceAround,
+            horizontalArrangement = Arrangement.End,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(16.dp)
                 .sizeIn(maxHeight = 72.dp)
         ) {
             Column(
-                //modifier = Modifier.height(72.dp)
+                modifier = Modifier.weight(1f)
             ) {
                 Text(
                     text = stringResource(superhero.name),
-                    style = MaterialTheme.typography.h3
+                    style = MaterialTheme.typography.h3,
                 )
                 Text(
                     text = stringResource(superhero.description),
@@ -57,7 +54,7 @@ fun SuperheroListItem(superhero: Superhero, modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.width(16.dp))
             Image(
                 contentScale = ContentScale.FillHeight,
-                modifier = Modifier
+                modifier = Modifier.size(72.dp)
                     .clip(Shapes.small),
                 painter = painterResource(superhero.image),
                 contentDescription = null
@@ -89,7 +86,7 @@ fun SuperheroApp() {
 fun HeroPreview() {
     val hero = Superhero(
         R.string.hero1,
-        R.string.description1,
+        R.string.description4,
         R.drawable.android_superhero1
     )
     SuperheroesTheme {
