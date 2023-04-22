@@ -14,7 +14,7 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Superheroes"
 include ':app'
-
+/* Don't touch this (until everything works!!!) */
 /*
 
 We recommend using a newer Android Gradle plugin to use compileSdkPreview = "UpsideDownCake"
