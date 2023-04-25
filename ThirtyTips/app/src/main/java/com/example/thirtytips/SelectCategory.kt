@@ -1,10 +1,17 @@
 package com.example.thirtytips
 
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ChevronRight
+import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.Card
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.structuralEqualityPolicy
@@ -26,8 +33,18 @@ fun CategoryListItem(category: Category, modifier: Modifier = Modifier) {
                 .height(72.dp)
         ) {
             Text(
-                text = stringResource(id = category.stringRes)
+                text = stringResource(id = category.stringRes),
+                style = MaterialTheme.typography.headlineLarge,
+                modifier = Modifier.padding(start = 24.dp)
             )
+            Spacer(Modifier.weight(1f))
+            IconButton(onClick = { /*TODO*/ }) {
+                Icon(
+                    imageVector = Icons.Filled.ChevronRight,
+
+                    contentDescription = null
+                )
+            }
         }
     }
 
