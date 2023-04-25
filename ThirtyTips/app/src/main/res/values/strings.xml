@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">ThirtyTips</string>
+    <string name="tip_1_name">Deep breathing</string>
+    <string name="tip_2_name">Progressive muscle relaxation</string>
+    <string name="tip_3_name">Body posture</string>
+    <string name="tip_4_name">Cardiovascular exercise</string>
+    <string name="tip_5_name">Good sleep</string>
+    <string name="tip_6_name">Avoiding sugar</string>
+    <string name="tip_7_name">Probiotics, fiber, vitamins, omegas, balance</string>
+    <string name="tip_8_name">Mindfulness yoga</string>
+    <string name="tip_9_name">Water/cold pack on your face</string>
+    <string name="tip_10_name">Meditation</string>
+
+    <string name="tip_1_short_text">Deep breathing</string>
+    <string name="tip_2_short_text">Progressive muscle relaxation</string>
+    <string name="tip_3_short_text">Body posture</string>
+    <string name="tip_4_short_text">Cardiovascular exercise</string>
+    <string name="tip_5_short_text">Good sleep</string>
+    <string name="tip_6_short_text">Avoiding sugar</string>
+    <string name="tip_7_short_text">Probiotics, fiber, vitamins, omegas, balance</string>
+    <string name="tip_8_short_text">Mindfulness yoga</string>
+    <string name="tip_9_short_text">Water/cold pack on your face</string>
+    <string name="tip_10_short_text">Meditation</string>
+
+    <string name="category_1">Body</string>
+    <string name="category_2">Mind</string>
+    <string name="category_3">Emotion</string>
+    <string name="category_4">Behavior</string>
+    <string name="category_5">Social</string>
 </resources>
