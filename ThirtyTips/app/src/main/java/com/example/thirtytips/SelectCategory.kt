@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -19,6 +20,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.structuralEqualityPolicy
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,6 +38,7 @@ fun DisplayCategoryList(modifier: Modifier = Modifier) {
     val categories = Category.values()
 
     Column{
+
         categories.forEach { category -> CategoryListItem(category = category) }
     }
 
@@ -41,6 +47,7 @@ fun DisplayCategoryList(modifier: Modifier = Modifier) {
 
 @Composable
 fun CategoryListItem(category: Category, modifier: Modifier = Modifier) {
+    var clicked by remember { mutableStateOf(false) }
     Card(
         modifier = Modifier.padding(2.dp)
     ) {
@@ -56,17 +63,24 @@ fun CategoryListItem(category: Category, modifier: Modifier = Modifier) {
                 modifier = Modifier.padding(start = 24.dp)
             )
             Spacer(Modifier.weight(1f))
-            IconButton(onClick = { /*TODO*/ }) {
+            IconButton(onClick = { clicked = !clicked  }) {
                 Icon(
                     imageVector = Icons.Filled.ChevronRight,
 
                     contentDescription = null
                 )
             }
+
+        }
+    }
+    Column {
+        if (clicked) {
+            DisplayTips()
         }
     }
 
 }
+
 
 @Preview
 @Composable
