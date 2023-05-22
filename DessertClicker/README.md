@@ -1,29 +1,46 @@
-Dessert Clicker app
-=====================
+# Dessert Clicker app  
+Keeps track of desserts being sold; to teach about configuration changes.
 
-Code for Android Basics with Compose Codelab.
+# App preview  
 
-Introduction
-------------
-
-Dessert Clicker is a game about making desserts.
-
-Press the button, make a dessert, earn the big bucks.
-
-You use this app in the course to explore the Android lifecycle and log messages to
-the Android console (Logcat).
-
-Pre-requisites
---------------
-
-You need to know:
-- How to open, build, and run apps with Android Studio.
-- What an activity is, and how to create one in your app.
-- What the activity's onCreate() method does, and the kind of operations
-  that are performed in that method.
+<p float="left">
+  <img src = "https://github.com/sarahmarie23/Learning-Jetpack-Compose/blob/DessertClicker.gif" width = "200"> 
+</p>
 
 
-Getting Started
----------------
+# Compose topics covered
 
-1. Download and run the app.
+### Terms learned  
+
+
+* **Activity lifecycle** - An app goes through these stages: `onCreate()`, `onStart()`, `onResume ()` (these first three are called
+when the app is started for the first time), `onPause()`, `onStop()`, and `onDestroy()`.
+  - Override the state's callback method to add behavior during that state.
+  - You can add in override methods manually or by selecting Code > Override Methods...
+
+```kotlin
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG, "onRestart Called")
+    }
+```
+
+* **Log / Logcat** - Displays messages that are useful for debugging.
+  - Debug messages use `Log.d()`. Assign it a tag and a message.
+  - Other types include `Log.v()` (verbose message), `Log.i()` (informational message), `Log.w()` (warnings), `Log.e()` (error messages).
+
+* **Confirguration changes** - Occurs when the state of the device changes so radically that the easiest way for the system to
+resolve the change is to destroy and rebuild the activity. 
+  - When a user rotates the device, `onPause()`, `onStop()`, and `onDestroy()` are called, followed by `onCreate()`, `onStart()`, and `onResume()`. 
+This means that values will be lost if they are not coded properly.
+
+### Code learned  
+
+* **rememberSaveable** (variable declaration) - use this instead of `remember` if you need to save a value that can survive a 
+configuration change.
+`var revenue by rememberSaveable { mutableStateOf(0) }`
+
+### Notes  
+
+* `onCreate()` and `onDestroy()` are only called once during the lifetime of a sigle activity instance. 
+  
