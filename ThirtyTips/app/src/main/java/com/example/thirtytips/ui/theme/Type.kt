@@ -1,6 +1,9 @@
 package com.example.thirtytips.ui.theme
 //import androidx.compose.material.Typography
 import androidx.compose.material3.Typography
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 //import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -20,6 +23,8 @@ val Typography = Typography(
     headlineLarge = TextStyle(
         fontFamily = Quicksand,
         fontWeight = FontWeight.Normal,
-        fontSize = 30.sp
+        fontSize = 28.sp,
+        color = Color.White,
+
     )
 )

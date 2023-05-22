@@ -22,6 +22,17 @@
     <string name="tip_9_short_text">Water/cold pack on your face</string>
     <string name="tip_10_short_text">Meditation</string>
 
+    <string name="tip_1_long_text">Inhale for 5 seconds. Hold it for 5 seconds. Exhale for 5 seconds. Repeat this 5 times.</string>
+    <string name="tip_2_long_text">Tense your toes, then release. Now your feet. Legs. Knees. Hips. Stomach. Back. Shoulders. Face. Head.</string>
+    <string name="tip_3_long_text">Stand in the Super Woman pose for 2 minutes.</string>
+    <string name="tip_4_long_text">Walk, jog, dance, whatever it takes to get your heart rate up. Go!</string>
+    <string name="tip_5_long_text">Be sure to nap no longer than 20 minutes. Go to bed early enough to get 8 hours of sleep.</string>
+    <string name="tip_6_long_text">Try to incorporate low sugar foods like almonds, lean meats, and vegetables.</string>
+    <string name="tip_7_long_text">Incorporate foods like yogurt, spinach, fruits in your meals. Make sure to have a variety of different foods.</string>
+    <string name="tip_8_long_text">Follow along with a yoga video on Youtube.</string>
+    <string name="tip_9_long_text">Dunk your face in a bowl of ice water, or use a cold pack. Cold showers work too.</string>
+    <string name="tip_10_long_text">Take a few minutes to do a meditation exercise.</string>
+
     <string name="category_1">Body</string>
     <string name="category_2">Mind</string>
     <string name="category_3">Emotion</string>
