@@ -2,11 +2,11 @@
 Keeps track of desserts being sold; to teach about configuration changes.
 
 # App preview  
-
-<p float="left">
-  <img src = "https://github.com/sarahmarie23/Learning-Jetpack-Compose/blob/DessertClicker.gif" width = "200"> 
+- Totals are preserved even with configuration changes
+<p>
+  <img src = "https://github.com/sarahmarie23/Learning-Jetpack-Compose/blob/main/DessertClicker/DessertClicker.gif" width = "200"> 
+  <img src = "https://github.com/sarahmarie23/Learning-Jetpack-Compose/blob/main/DessertClicker/DessertClickerLogcat.JPG" > 
 </p>
-
 
 # Compose topics covered
 
