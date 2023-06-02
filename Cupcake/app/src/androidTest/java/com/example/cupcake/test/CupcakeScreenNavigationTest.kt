@@ -44,7 +44,7 @@ class CupcakeScreenNavigationTest {
     }
 
     @Test
-    fun cupcakeNavHost_verityBackNavigationNotShownOnStartOrderScreen() {
+    fun cupcakeNavHost_verifyBackNavigationNotShownOnStartOrderScreen() {
         val backText = composeTestRule.activity.getString(R.string.back_button)
         composeTestRule.onNodeWithContentDescription(backText).assertDoesNotExist()
     }
@@ -84,58 +84,88 @@ class CupcakeScreenNavigationTest {
             .performClick()
     }
 
+    private fun performNavigateUp() {
+        val backText = composeTestRule.activity.getString(R.string.back_button)
+        composeTestRule.onNodeWithContentDescription(backText).performClick()
+    }
+
+    private fun performNavigateNext() {
+        val nextText = composeTestRule.activity.getString(R.string.next)
+        composeTestRule.onNodeWithContentDescription(nextText).performClick()
+    }
+
+    private fun performNavigateCancel() {
+        val cancelText = composeTestRule.activity.getString(R.string.cancel)
+        composeTestRule.onNodeWithContentDescription(cancelText).performClick()
+    }
+
+    // Flavor Screen: Back, Cancel, Next
+
     @Test
-    fun cupcakeNavHost_clickUpOnFlavorScreen_navigatesToStartScreen() {
+    fun cupcakeNavHost_clickBackOnFlavorScreen_navigatesToStartScreen() {
         navigateToFlavorScreen()
-        composeTestRule.onNodeWithStringId(R.string.back_button)
-            .performClick()
+        performNavigateUp()
+        navController.assertCurrentRouteName(CupcakeScreen.Start.name)
     }
 
     @Test
     fun cupcakeNavHost_clickCancelOnFlavorScreen_navigatesToStartScreen() {
         navigateToFlavorScreen()
-        composeTestRule.onNodeWithStringId(R.string.cancel)
-            .performClick()
+        performNavigateCancel()
+        navController.assertCurrentRouteName(CupcakeScreen.Start.name)
     }
 
     @Test
     fun cupcakeNavHost_clickNextOnFlavorScreen_navigatesToPickupScreen() {
         navigateToFlavorScreen()
-        composeTestRule.onNodeWithStringId(R.string.next)
-            .performClick()
+        performNavigateNext()
         navController.assertCurrentRouteName(CupcakeScreen.Pickup.name)
     }
 
+    // Pickup Screen: Back, Cancel, Next
+
     @Test
-    fun cupcakeNavHost_clickUpOnPickupScreen_navigatesToFlavorScreen() {
+    fun cupcakeNavHost_clickBackOnPickupScreen_navigatesToFlavorScreen() {
         navigateToPickupScreen()
-        composeTestRule.onNodeWithStringId(R.string.back_button)
-            .performClick()
+        performNavigateUp()
         navController.assertCurrentRouteName(CupcakeScreen.Flavor.name)
     }
 
     @Test
     fun cupcakeNavHost_clickCancelOnPickupScreen_navigatesToStartScreen() {
         navigateToPickupScreen()
-        composeTestRule.onNodeWithStringId(R.string.cancel)
-            .performClick()
+        performNavigateCancel()
         navController.assertCurrentRouteName(CupcakeScreen.Start.name)
     }
 
     @Test
     fun cupcakeNavHost_clickNextOnPickupScreen_navigatesToSummaryScreen() {
         navigateToPickupScreen()
-        composeTestRule.onNodeWithStringId(R.string.next)
-            .performClick()
+        performNavigateNext()
         navController.assertCurrentRouteName(CupcakeScreen.Summary.name)
     }
+
+    // Summary Screen: Back, Cancel, Send
+
+    @Test
+    fun cupcakeNavHost_clickBackOnSummaryScreen_navigatesToPickupScreen() {
+        navigateToSummaryScreen()
+        performNavigateUp()
+        navController.assertCurrentRouteName(CupcakeScreen.Pickup.name)
+    }
+
 
     @Test
     fun cupcakeNavHost_clickCancelOnSummaryScreen_navigatesToStartScreen() {
         navigateToSummaryScreen()
-        composeTestRule.onNodeWithStringId(R.string.cancel)
-            .performClick()
+        performNavigateCancel()
         navController.assertCurrentRouteName(CupcakeScreen.Start.name)
+    }
+
+    @Test
+    fun cupcakeNavHost_clickSendOnSummaryScreen_popupToSendData() {
+        navigateToSummaryScreen()
+        //TODO
     }
 
 }
