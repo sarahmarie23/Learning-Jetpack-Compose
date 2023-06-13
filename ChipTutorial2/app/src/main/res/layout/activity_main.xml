@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.chip.Chip
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Chip.Entry"
+        android:id="@+id/chip"
+        android:checkable="false"
+        android:text="Not checkable"
+        app:chipIcon="@drawable/location_pin"
+        app:closeIcon="@drawable/close_button">
+
+    </com.google.android.material.chip.Chip>
+
+    <com.google.android.material.chip.Chip
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chip2"
+        android:checkable="true"
+        app:checkedIcon="@drawable/check"
+
+        android:text="Selectable"
+
+   >
+
+    </com.google.android.material.chip.Chip>
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        android:id="@+id/chip_group_filter"
+        app:layout_constraintTop_toBottomOf="@+id/text_filter"
+        >
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:text="Fast Delivery"
+            android:layout_height="wrap_content"
+            android:id="@+id/chip3"
+            />
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:text="Pickup"
+            android:layout_height="wrap_content"
+            android:id="@+id/chip4"
+            />
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:text="Best Offer"
+            android:layout_height="wrap_content"
+            android:id="@+id/chip5"
+            />
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:text="Fast Selling"
+            android:layout_height="wrap_content"
+            android:id="@+id/chip6"
+            />
+    </com.google.android.material.chip.ChipGroup>
+
+</LinearLayout>

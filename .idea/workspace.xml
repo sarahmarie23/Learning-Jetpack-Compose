@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a506a0a6-fa4e-4d90-be83-59eba2a249d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Woof/app/src/main/res/font/abril_fatface_regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Woof/app/src/main/res/font/montserrat_bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Woof/app/src/main/res/font/montserrat_regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Woof/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Woof/app/src/main/res/values-v23/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lemonade/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lemonade/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lemonade/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Lemonade/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotesExperiment/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/NotesExperiment/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/.github/ISSUE_TEMPLATE/material-theming-issue-template.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/.github/ISSUE_TEMPLATE/testing-for-accessibility-issue-template.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Woof/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/ui/theme/Color.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/ui/theme/Color.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/ui/theme/Shape.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/ui/theme/Shape.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/ui/theme/Theme.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/ui/theme/Theme.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/ui/theme/Type.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Woof/app/src/main/java/com/example/woof/ui/theme/Type.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Woof/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Woof/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Woof/app/src/main/res/values/themes.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Lemonade" />
+  </component>
+  <component name="ProjectId" id="2QXAC21SAVwD2k318VnOuvvsIME" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "C:/Users/Sarah/AndroidStudioProjects/basic-android-kotlin-compose-training-cupcake-starter",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a506a0a6-fa4e-4d90-be83-59eba2a249d6" name="Changes" comment="" />
+      <created>1685489420938</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685489420938</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

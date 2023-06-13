@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Business Card</string>
+    <string name="sarah_martel">Sarah Martel</string>
+    <string name="title">Aspiring Android Developer</string>
+    <string name="phone_number">(555) 987-6543</string>
+    <string name="social_media">\@somesocialmediapage</string>
+    <string name="emai">email@domain.com</string>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Photo Album</string>
+    <string name="day_2_date">March 14, 2023</string>
+    <string name="day_3_date">March 15, 2023</string>
+    <string name="day_5_date">March 17, 2023</string>
+    <string name="loc_1">Portland, OR</string>
+    <string name="loc_2">Seattle, WA</string>
+    <string name="loc_3">Vancouver, BC</string>
+    <string name="photo_1_desc">Voodoo Donuts sign</string>
+    <string name="photo_1_title">Voodoo Donuts</string>
+    <string name="photo_2_title">Gum Wall</string>
+    <string name="photo_2_desc">Gum wall in downtown Seattle</string>
+    <string name="photo_3_title">Stanley Park Totem Poles</string>
+    <string name="photo_3_desc">Totem Poles at Stanley Park BC</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+</resources>

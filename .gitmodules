@@ -1,0 +1,8 @@
+[submodule "basic-android-kotlin-compose-training-lunch-tray"]
+	path = basic-android-kotlin-compose-training-lunch-tray
+	url = https://github.com/google-developer-training/basic-android-kotlin-compose-training-lunch-tray
+	branch = starter
+[submodule "LunchTray"]
+	path = LunchTray
+	url = https://github.com/google-developer-training/basic-android-kotlin-compose-training-lunch-tray
+	branch = starter
