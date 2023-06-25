@@ -15,6 +15,7 @@
  */
 package com.example.reply.ui
 
+import androidx.activity.compose.BackHandler
 import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -54,6 +55,9 @@ fun ReplyDetailsScreen(
     modifier: Modifier = Modifier,
     onBackPressed: () -> Unit = {},
 ) {
+    BackHandler() {
+        onBackPressed()
+    }
     Box(modifier = modifier) {
         LazyColumn(
             modifier = Modifier
